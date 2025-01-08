@@ -3,25 +3,28 @@
   padding: 0;
 }
 
-.hero{
+.hero {
   display: flex;
-  align-items: center; 
+  align-items: center;
 }
 
-.hero{
-  .hero-content{
+.hero {
+  .hero-content {
     margin: 48px;
+  }
+  h1{
+    color : var(--text-primary);
   }
 }
 
-.hero-container.left{
-  .hero{
+.hero-container.left {
+  .hero {
     flex-direction: column-reverse;
   }
 }
 
-.hero-container.right{
-  .hero{
+.hero-container.right {
+  .hero {
     flex-direction: column;
   }
 }
@@ -32,8 +35,8 @@
     min-height: 400px;
   }
 
-  .hero{
-    .hero-content{
+  .hero {
+    .hero-content {
       margin: 0;
     }
   }
@@ -54,13 +57,6 @@
     line-height: 57px;
   }
 
-  .hero p {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 25px;
-    color: var(--text-body);
-  }
 
   .hero img {
     object-fit: cover;
@@ -112,6 +108,79 @@
       width: 40%;
       opacity: 0.9;
     }
+  }
+
+}
+
+/* 2 column variation */
+
+.hero-container.two-column-layout { 
+  background-color: #f1f1f1;
+  
+  .hero>div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .hero picture {
+    position: unset;
+  }
+
+  .herocol-1 {
+    width: 50%;
+    margin: 48px;
+  }
+
+  .herocol-1 img {
+    width: 528px;
+    margin: 32px 0;
+  }
+
+  .herocol-1 p{
+    margin: 0;
+  }
+
+  .herocol-1 h1, h3{
+    margin: 0;
+  }
+
+  .herocol-1 strong{
+    font-size: 20px;
+    line-height: 27px;
+    margin: 0;
+    font-weight: normal;
+  }
+
+  .herocol-1 blockquote,
+  .herocol-2 blockquote {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 17px;
+    color: #4C4C4C;
+    margin: 0;    
+  }
+
+  .herocol-1 blockquote p{
+    font-size: 12px;
+    text-align: left;
+  }
+
+  .herocol-2 {
+    width: 50%;
+    margin-right: 48px;
+  }
+
+  .herocol-2 img {
+    width: 592px;
+  }
+
+  .herocol-2 blockquote p{
+    font-size: 12px;
+    width: 300px;
+    text-align: right;
+    float: right;
   }
 
 }

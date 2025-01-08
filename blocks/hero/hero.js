@@ -1,5 +1,11 @@
 export default function decorate(block) {
-  // setup image columns
+  // if statement for setup full content hero banner
+  if(block.children.length === 1){
+    const cols = [...block.firstElementChild.children];
+    cols.forEach((col, id) => {      
+      col.classList.add(`herocol-${id+1}`);
+    });
+  } else {
   [...block.children].forEach((row) => {
     [...row.children].forEach((col) => {
       const pic = col.querySelector('picture');
@@ -20,4 +26,5 @@ export default function decorate(block) {
       }
     });
   });
+}
 }
