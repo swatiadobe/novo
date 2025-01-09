@@ -1,3 +1,6 @@
+.teaser-container{
+    background-color: #F4F4F6;
+}
 .teaser{
     background-color: #F4F4F6;
     color: #4C4C4C;
@@ -10,6 +13,14 @@
 
 .teaser img {
     width: 100%;
+    object-fit: fill;
+}
+
+.teaser-wrapper picture,
+.teaser-wrapper img{
+    height: 100%;
+    width: auto;
+    object-fit: cover;
 }
 
 .teaser > div > div {
@@ -24,11 +35,28 @@
     display: block;
 }
 
-.right {
+
+
+.no-image-right{
     text-align: right;
+    /* background-color: #F4F4F6; */
+}
+.no-image-right .teaser > div {
+    /* align-items: center; */
+    display: flex;
+    flex-direction: unset;
+    gap: 24px;
+    /* background-color: #FFFFFF; */
 }
 .center {
     text-align: center;
+}
+.right{
+    text-align: right;
+}
+
+.teaser > div >div:nth-of-type(2){
+    padding: 32px 24px;
 }
 @media (width >= 900px) {
     .teaser > div {
@@ -36,12 +64,17 @@
         display: flex;
         flex-direction: unset;
         gap: 24px;
+        /* background-color: #FFFFFF; */
     }
 
     .teaser > div > div {
         flex: 1;
         order: unset;
-        padding: 8px;
+        /* padding: 8px; */
+    }
+    .teaser > div >div:nth-of-type(2){
+        padding: 64px;
+        /* background-color: #FFFFFF; */
     }
 
     .teaser > div > div h2 {
@@ -50,13 +83,18 @@
         padding-bottom: 24px;
     }
 
+    .teaser > div > div p:last-child{
+        font-size: 16px;
+    }
+
     .teaser p .button-container {
-        padding: 24px 16px 24px 16px;
+        margin: 24px ;
     }
     .left .teaser-wrapper .teaser > div {
         display: flex;
         flex-direction: unset;
         gap: 24px;
+        padding: 30px 40px;
     }
 
     .right .teaser-wrapper .teaser > div {
@@ -70,15 +108,21 @@
     }
 
     .right {
-        text-align: right;
+        /* text-align: right; */
+        /* padding: 8px; */
     }
     .center {
         text-align: center;
+        /* padding: 8px; */
     }
     .center .teaser-wrapper img{
         width: 100%;
         min-height: 300px;
         height: 0px;
+    }
+
+    .no-image-left{
+        padding: 64px;
     }
     /* .teaser-container{
         display: flex;
