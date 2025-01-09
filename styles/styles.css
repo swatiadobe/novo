@@ -18,8 +18,8 @@
   --text-color: #131313;
   --link-color: #005ad2;
   --link-hover-color: #1d3ecf;
-  --black : #333333;
-  --white : #FFFFFF;
+  --black : #333;
+  --white : #FFF;
   --light-gray : #939498;
   --dark-gray : #505860;
   --text-primary : #001965;
@@ -121,7 +121,9 @@ h6 {
 
 h1 { font-size: var(--heading-font-size-xxl); }
 h2 { font-size: var(--heading-font-size-xl); }
-h3 { font-size: var(--heading-font-size-m);
+
+h3 { 
+  font-size: var(--heading-font-size-m);
 line-height: 33px; }
 h4 { font-size: var(--heading-font-size-m); }
 h5 { font-size: var(--heading-font-size-s); }
