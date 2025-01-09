@@ -41,10 +41,13 @@
     .teaser > div > div {
         flex: 1;
         order: unset;
+        padding: 8px;
     }
 
     .teaser > div > div h2 {
+
         color: #001965;
+        padding-bottom: 24px;
     }
 
     .teaser p .button-container {
@@ -96,6 +99,11 @@
         max-width: 1200px;
         margin: 0 auto;
         /* flex-wrap: wrap; */
+    }
+    .fourcol .teaser-wrapper .teaser{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap:24px
     }
 } 
 
