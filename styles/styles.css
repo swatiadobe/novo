@@ -27,8 +27,8 @@
   --primary-btn : #005ad2;
 
   /* fonts */
-  --body-font-family: roboto, roboto-fallback, sans-serif;
-  --heading-font-family: roboto-condensed, roboto-condensed-fallback, sans-serif;
+  --body-font-family:  noto-sans-hebrew, noto-sans-arabic, noto-sans, sans-serif;
+  --heading-font-family:  noto-sans-hebrew, noto-sans-arabic, noto-sans, sans-serif;
 
   /* body sizes */
   --body-font-size-m: 22px;
@@ -44,18 +44,18 @@
   --heading-font-size-xs: 22px;
 
   /* nav height */
-  --nav-height: 64px;
+  --nav-height: 100px;
 }
 
 /* fallback fonts */
 @font-face {
-  font-family: roboto-condensed-fallback;
+  font-family: noto-sans-hebrew;
   size-adjust: 88.82%;
   src: local('Arial');
 }
 
 @font-face {
-  font-family: roboto-fallback;
+  font-family:  noto-sans-hebrew;
   size-adjust: 99.529%;
   src: local('Arial');
 }
@@ -83,7 +83,6 @@ body {
   background-color: var(--background-color);
   color: var(--text-color);
   font-family: var(--body-font-family);
-  font-size: var(--body-font-size-m);
   line-height: 1.6;
 }
 
@@ -213,6 +212,12 @@ button:hover,
 button:focus {
   background-color: var(--primary-btn);
   cursor: pointer;
+}
+
+a.button::after{
+  content: url('../assets/right-arrow-svgrepo-com.svg');    
+  display: inline-block;
+  padding-left: 12px;
 }
 
 button:disabled,
